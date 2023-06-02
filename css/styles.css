@@ -185,6 +185,7 @@ img {
 }
 
 .header-link {
+    position: relative;
     display: block;
     padding: 24px 0;
     transition: color var(--transform-all);
@@ -259,7 +260,7 @@ img {
     align-items: center;
     padding: 16px 32px;
     border: 0;
-    transition: color var(--transform-all)
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /**--features--**/
@@ -393,7 +394,7 @@ img {
     align-items: center;
     justify-content: center;
     fill: var(--background-color-team);
-    transition: color, fill var(--transform-all)
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-soc-link:hover,
@@ -431,7 +432,7 @@ img {
     justify-content: center;
     align-items: center;
     color: var(--deemphasized-helper-color);
-    transition: color, border var(--transform-all)
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-link-icon {
@@ -515,7 +516,8 @@ img {
     background-color: var(--primary-brand-color);
     border-radius: 50%;
     fill: var(--background-color-team);
-    transition: color, var(--transform-all)
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
 }
 
 .footer-soc-link:hover,
@@ -614,7 +616,7 @@ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     height: 100%;
     background-color: rgba(46, 47, 66, 0.4);
     top: 0px;
-    transition: opacity 250ms linear, visibility 250ms linear;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal {
@@ -622,7 +624,7 @@ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
-    transition: transform 250ms linear;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     width: 408px;
     min-height: 584px;
     background-color: var(--modal-background);
@@ -636,20 +638,23 @@ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close {
+    position: absolute;
+    top: 24px;
+    right: 24px;
     width: 24px;
     height: 24px;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
     background-color: var(--color-accent);
-    margin-left: auto;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 0
 }
 
 .is-hidden {
-    visibility: none;
+    visibility: hidden;
     opacity: 0;
     pointer-events: none;
 }

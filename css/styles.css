@@ -573,11 +573,8 @@ img {
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.portfolio-item:hover .card-cover-text {
-    transform: translateY(0%);
-}
-
-.portfolio-item:focus .card-cover-text {
+.portfolio-item-link:hover .card-cover-text,
+.portfolio-item-link:focus .card-cover-text {
     transform: translateY(0%);
 }
 
